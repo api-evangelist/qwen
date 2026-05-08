@@ -5,31 +5,42 @@ provider: Qwen
 providerId: qwen
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - LLM
-- Inference
-- Open Source
 - Alibaba
 - Rate Limiting
-- Quotas
-- Throttling
-description: Placeholder rate-limit artifact for Qwen. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: >-
+  Alibaba Cloud Model Studio enforces per-model RPM/TPM and concurrent-task quotas. Limits
+  are configurable per workspace and visible in the console; defaults vary by model and tier.
+notes: >-
+  Concurrent task quotas exist alongside RPM/TPM. Higher limits available via Alibaba Cloud
+  ticketing or enterprise contracts.
 sources:
-- https://qwen.ai/
+- https://www.alibabacloud.com/help/en/model-studio
 responseCodes:
   throttled: 429
 limits:
-- name: Default
+- name: Default RPM
   scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  metric: requests-per-minute
+  limit: see workspace console
+  notes: Per-model defaults; varies by Qwen variant.
+- name: Default TPM
+  scope: account
+  metric: tokens-per-minute
+  limit: see workspace console
+- name: Concurrent Tasks
+  scope: account
+  metric: concurrent-tasks
+  limit: see workspace console
+  notes: Image/video generation has separate concurrency caps.
 policies:
 - name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  description: Exponential backoff with jitter; honor Retry-After.
+- name: Limit Increase
+  description: Submit a quota request via Alibaba Cloud console for higher RPM/TPM.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

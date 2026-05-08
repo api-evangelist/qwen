@@ -5,20 +5,22 @@ provider: Qwen
 providerId: qwen
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - LLM
-- Inference
-- Open Source
 - Alibaba
 - FinOps
-- Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Qwen. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: >-
+  FOCUS-aligned FinOps profile for Qwen via Alibaba Cloud Model Studio (DashScope). Pay-as-you-go
+  per-token pricing tiered by context-length window, billed alongside Alibaba Cloud account.
+  International USD vs. mainland-China CNY pricing differ.
+notes: >-
+  Spend appears on the Alibaba Cloud invoice under Model Studio / DashScope SKUs. Free
+  self-hosting option exists for open-weight Qwen variants.
 sources:
-- https://qwen.ai/
+- https://www.alibabacloud.com/help/en/model-studio/models
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -26,41 +28,69 @@ alignedWith:
   dataSpec: FOCUS
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
-publisherName: Qwen
-serviceCategory: AI
+publisherName: Alibaba Cloud
+serviceCategory: AI and Machine Learning
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Usage Based (Tiered Context)
   billingFrequency: Monthly
-  billingCurrency: USD
+  billingCurrency: USD/CNY
   chargeCategories:
   - Usage
   - Purchase
   - Adjustment
 focusColumns:
-  ServiceName: Qwen
-  ServiceCategory: AI
-  ProviderName: Qwen
-  PublisherName: Qwen
-  InvoiceIssuerName: Qwen
+  ServiceName: Alibaba Cloud Model Studio (DashScope)
+  ServiceCategory: AI and Machine Learning
+  ProviderName: Alibaba Cloud
+  PublisherName: Alibaba Cloud
+  InvoiceIssuerName: Alibaba Cloud
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: input_tokens_tier1
+  description: Input tokens 0-32K context window.
+  unit: tokens
   aggregation: sum
-  dimensions:
-  - account
-  - resource
+  dimensions: [model, region, account]
+- name: input_tokens_tier2
+  description: Input tokens 32-128K context window.
+  unit: tokens
+  aggregation: sum
+  dimensions: [model, region, account]
+- name: input_tokens_tier3
+  description: Input tokens 128K-1M context window.
+  unit: tokens
+  aggregation: sum
+  dimensions: [model, region, account]
+- name: output_tokens
+  description: Output tokens billed by tier.
+  unit: tokens
+  aggregation: sum
+  dimensions: [model, region, account]
+- name: image_generations
+  description: Image generation calls.
+  unit: images
+  aggregation: sum
+  dimensions: [model, account]
+- name: video_generations
+  description: Video generation calls.
+  unit: videos
+  aggregation: sum
+  dimensions: [model, account]
+- name: audio_seconds
+  description: TTS/ASR seconds.
+  unit: seconds
+  aggregation: sum
+  dimensions: [model, account]
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Alibaba Cloud Console exports DashScope usage and invoice line items.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: Use workspace IDs and API key tagging to attribute spend across teams.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Choose Flash/Plus tiers for non-critical paths; bound prompts under tier-1 context window; consider self-hosting open-weight Qwen for batch.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Renewal review of CommitRate or enterprise discounts for high-volume workloads.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

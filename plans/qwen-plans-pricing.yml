@@ -5,37 +5,172 @@ provider: Qwen
 providerId: qwen
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - LLM
-- Inference
-- Open Source
 - Alibaba
 - Plans
-description: Placeholder plans/pricing artifact for Qwen. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled against the provider's documentation.
+description: >-
+  Pay-as-you-go per-token pricing across the Qwen model family on Alibaba Cloud Model Studio
+  (DashScope). Tiered by context-length window. Free open-weight self-hosting available for
+  Qwen2.5/Qwen3 open variants.
+notes: >-
+  Pricing tiers are stratified by input context size (0-32K, 32-128K, 128-256K, 256K-1M).
+  International pricing in USD; mainland-China pricing in CNY. Sample rates as of May 2026:
+  Qwen3-Max input $1.2/M up to 32K and $3/M at 128-252K. Qwen3.5-Plus input $0.4/M up to 256K.
+  Qwen3.5-Flash input $0.1/M up to 128K. Qwen3-VL-Plus input $0.2/M up to 32K.
 sources:
-- https://qwen.ai/
+- https://www.alibabacloud.com/help/en/model-studio/models
+- https://www.alibabacloud.com/help/en/model-studio/get-api-key
 plans:
-- id: qwen-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
+- id: qwen-pay-as-you-go-international
+  name: DashScope Pay As You Go (International)
+  type: usage
+  description: International (Singapore/US/HK/Frankfurt) usage billing in USD.
   entries:
-  - label: API Access
-    name: api_access
-    type: flat
-    metric: varies
+  - label: Qwen3-Max Input (0-32K)
+    name: qwen3_max_input_32k
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: international
+    unit: 1000000
+    price: '1.20 USD'
+    userMultiplied: false
+  - label: Qwen3-Max Output (0-32K)
+    name: qwen3_max_output_32k
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: international
+    unit: 1000000
+    price: '6.00 USD'
+    userMultiplied: false
+  - label: Qwen3.5-Plus Input (0-256K)
+    name: qwen35_plus_input
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: international
+    unit: 1000000
+    price: '0.40 USD'
+    userMultiplied: false
+  - label: Qwen3.5-Plus Output (0-256K)
+    name: qwen35_plus_output
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: international
+    unit: 1000000
+    price: '2.40 USD'
+    userMultiplied: false
+  - label: Qwen3.5-Flash Input (0-128K)
+    name: qwen35_flash_input
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: international
+    unit: 1000000
+    price: '0.10 USD'
+    userMultiplied: false
+  - label: Qwen3.5-Flash Output (0-128K)
+    name: qwen35_flash_output
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: international
+    unit: 1000000
+    price: '0.40 USD'
+    userMultiplied: false
+  - label: Qwen3-VL-Plus Input (0-32K)
+    name: qwen3_vl_plus_input
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: international
+    unit: 1000000
+    price: '0.20 USD'
+    userMultiplied: false
+  - label: Qwen3-VL-Flash Input (0-32K)
+    name: qwen3_vl_flash_input
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: international
+    unit: 1000000
+    price: '0.05 USD'
+    userMultiplied: false
+  elements:
+  - name: Qwen3-Max
+  - name: Qwen3.5-Plus / Qwen3.5-Flash
+  - name: Qwen3-VL-Plus / Qwen3-VL-Flash
+  - name: Qwen3-Coder
+  - name: Qwen-Audio (TTS/ASR)
+- id: qwen-pay-as-you-go-china
+  name: DashScope Pay As You Go (China Mainland)
+  type: usage
+  description: Mainland China (Beijing) usage billing in CNY (USD-equivalents shown).
+  entries:
+  - label: Qwen-Plus Input (0-128K)
+    name: qwen_plus_cn_input
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: china
+    unit: 1000000
+    price: '~0.115 USD'
+    userMultiplied: false
+  - label: Qwen-Flash Input (0-128K)
+    name: qwen_flash_cn_input
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: china
+    unit: 1000000
+    price: '~0.022 USD'
+    userMultiplied: false
+  - label: Qwen-VL-OCR
+    name: qwen_vl_ocr_cn
+    type: usage
+    metric: tokens
+    limit: -1
+    timeFrame: usage
+    geo: china
+    unit: 1000000
+    price: '~0.043 USD input / 0.072 USD output'
+    userMultiplied: false
+  elements:
+  - name: Qwen-Plus / Qwen-Flash
+  - name: Qwen-VL-OCR
+- id: qwen-self-hosted
+  name: Self-Hosted (Open Weights)
+  type: free
+  description: Qwen2.5/Qwen3 open weights are available on Hugging Face/ModelScope under permissive licenses.
+  entries:
+  - label: Open Weights
+    name: open_weights
+    type: free
+    metric: weights
     limit: -1
     timeFrame: usage
     geo: global
     unit: 1
-    price: see https://qwen.ai/
+    price: '0.00'
     userMultiplied: false
   elements:
-  - name: Pending Reconciliation
+  - name: Qwen3-32B / Qwen3-14B / Qwen3-7B
+  - name: Qwen2.5-72B / Qwen2.5-32B / Qwen2.5-Coder
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
