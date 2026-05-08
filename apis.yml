@@ -1,0 +1,29 @@
+aid: qwen
+url: https://raw.githubusercontent.com/api-evangelist/qwen/refs/heads/main/apis.yml
+name: Qwen
+x-type: company
+description: >-
+  Qwen is Alibaba's open-source large language model family, including Qwen2.5, Qwen3, Qwen-VL (vision), Qwen-Coder, and Qwen-Audio. APIs are exposed via Alibaba Cloud Model Studio (DashScope) with per-token pricing.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI
+  - LLM
+  - Inference
+  - Open Source
+  - Alibaba
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://qwen.ai/
+  - type: Plans
+    url: plans/qwen-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/qwen-rate-limits.yml
+  - type: FinOps
+    url: finops/qwen-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
