@@ -1,7 +1,7 @@
 aid: qwen
 url: https://raw.githubusercontent.com/api-evangelist/qwen/refs/heads/main/apis.yml
 name: Qwen
-x-type: company
+kind: company
 description: >-
   Qwen is Alibaba's large language model family, including Qwen3-Max, Qwen3.5-Plus,
   Qwen3.5-Flash, Qwen3-VL (vision), Qwen-Coder, Qwen-Audio, and Qwen open-source weights.
