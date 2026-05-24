@@ -1,0 +1,106 @@
+openapi: 3.1.0
+info:
+  title: Qwen via Alibaba Cloud Model Studio (DashScope)
+  description: >-
+    OpenAI-compatible REST API for invoking Alibaba's Qwen large language model
+    family through Alibaba Cloud Model Studio (DashScope). Supports chat
+    completions, text embeddings, and related model interfaces. Regional API
+    keys are not interchangeable across the Singapore, US Virginia, and Beijing
+    endpoints.
+  version: v1
+servers:
+  - url: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+    description: Singapore (international)
+  - url: https://dashscope-us.aliyuncs.com/compatible-mode/v1
+    description: US (Virginia)
+  - url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    description: China (Beijing)
+security:
+  - BearerAuth: []
+paths:
+  /chat/completions:
+    post:
+      summary: Create a chat completion
+      operationId: createChatCompletion
+      description: >-
+        OpenAI-compatible chat completions endpoint. Send a list of messages
+        with a Qwen model (e.g. qwen-plus, qwen-max, qwen-turbo, qwen3-max).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - model
+                - messages
+              properties:
+                model:
+                  type: string
+                  description: Qwen model id (e.g. qwen-plus, qwen-max)
+                messages:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - role
+                      - content
+                    properties:
+                      role:
+                        type: string
+                        enum: [system, user, assistant, tool]
+                      content:
+                        type: string
+                stream:
+                  type: boolean
+                  default: false
+                temperature:
+                  type: number
+                top_p:
+                  type: number
+                max_tokens:
+                  type: integer
+      responses:
+        '200':
+          description: Chat completion response
+  /embeddings:
+    post:
+      summary: Create text embeddings
+      operationId: createEmbeddings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - model
+                - input
+              properties:
+                model:
+                  type: string
+                  description: Embedding model id (e.g. text-embedding-v3)
+                input:
+                  oneOf:
+                    - type: string
+                    - type: array
+                      items:
+                        type: string
+      responses:
+        '200':
+          description: Embedding response
+  /models:
+    get:
+      summary: List available models
+      operationId: listModels
+      responses:
+        '200':
+          description: Model list
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: >-
+        Bearer API key from the DashScope key management page. Pass as
+        `Authorization: Bearer <DASHSCOPE_API_KEY>`.
