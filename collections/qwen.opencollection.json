@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Qwen via Alibaba Cloud Model Studio (DashScope)",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Create a chat completion",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "OpenAI-compatible chat completions endpoint. Send a list of messages with a Qwen model (e.g. qwen-plus, qwen-max, qwen-turbo, qwen3-max)."
+    },
+    {
+      "info": {
+        "name": "Create text embeddings",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/embeddings",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create text embeddings"
+    },
+    {
+      "info": {
+        "name": "List available models",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/models"
+      },
+      "docs": "List available models"
+    }
+  ],
+  "bundled": true
+}
