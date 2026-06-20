@@ -7,7 +7,7 @@ description: >-
   Qwen3.5-Flash, Qwen3-VL (vision), Qwen-Coder, Qwen-Audio, and Qwen open-source weights.
   APIs are exposed via Alibaba Cloud Model Studio (DashScope) with per-token pricing
   across multiple regions. The qwen.ai consumer site fronts the chat product.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - LLM
@@ -26,7 +26,7 @@ apis:
       completions, multimodal vision, embeddings, audio (TTS/ASR), image generation, video
       generation, function calling, and tool use. Both DashScope-native and OpenAI-compatible
       endpoints. Multiple regional base URLs (Singapore, US-Virginia, HK, Frankfurt, Beijing).
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.alibabacloud.com/help/en/model-studio
     baseURL: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
     tags:
