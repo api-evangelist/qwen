@@ -42,7 +42,7 @@ apis:
     properties:
       - type: Documentation
         url: https://www.alibabacloud.com/help/en/model-studio
-      - type: SignUp
+      - type: Signup
         url: https://www.alibabacloud.com/product/modelstudio
       - type: Pricing
         url: https://www.alibabacloud.com/help/en/model-studio/models
