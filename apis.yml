@@ -59,6 +59,10 @@ apis:
       - type: BeijingBaseURL
         url: https://dashscope.aliyuncs.com/compatible-mode/v1
 common:
+  - type: DomainSecurity
+    url: security/qwen-domain-security.yml
+  - type: Authentication
+    url: authentication/qwen-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/qwen
   - type: Website
@@ -73,6 +77,8 @@ common:
     url: rate-limits/qwen-rate-limits.yml
   - type: FinOps
     url: finops/qwen-finops.yml
+  - url: https://qwenlm.github.io/blog/index.xml
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

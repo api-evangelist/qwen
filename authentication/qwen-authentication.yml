@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/qwen-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  description: 'Bearer API key from the DashScope key management page. Pass as `Authorization:
+    Bearer <DASHSCOPE_API_KEY>`.'
+  sources:
+  - openapi/qwen-openapi.yml
