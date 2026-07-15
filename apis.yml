@@ -59,6 +59,8 @@ apis:
       - type: BeijingBaseURL
         url: https://dashscope.aliyuncs.com/compatible-mode/v1
 common:
+  - type: AgenticAccess
+    url: agentic-access/qwen-agentic-access.yml
   - type: DomainSecurity
     url: security/qwen-domain-security.yml
   - type: Authentication
