@@ -1,0 +1,32 @@
+openapi: 3.1.0
+info:
+  title: Qwen via Alibaba Cloud Model Studio (DashScope) Chat Models API
+  description: OpenAI-compatible REST API for invoking Alibaba's Qwen large language model family through Alibaba Cloud Model Studio (DashScope). Supports chat completions, text embeddings, and related model interfaces. Regional API keys are not interchangeable across the Singapore, US Virginia, and Beijing endpoints.
+  version: v1
+servers:
+- url: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+  description: Singapore (international)
+- url: https://dashscope-us.aliyuncs.com/compatible-mode/v1
+  description: US (Virginia)
+- url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  description: China (Beijing)
+security:
+- BearerAuth: []
+tags:
+- name: Models
+paths:
+  /models:
+    get:
+      summary: List available models
+      operationId: listModels
+      responses:
+        '200':
+          description: Model list
+      tags:
+      - Models
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Bearer API key from the DashScope key management page. Pass as `Authorization: Bearer <DASHSCOPE_API_KEY>`.'
