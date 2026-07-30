@@ -7,7 +7,20 @@ description: >-
   Qwen3.5-Flash, Qwen3-VL (vision), Qwen-Coder, Qwen-Audio, and Qwen open-source weights.
   APIs are exposed via Alibaba Cloud Model Studio (DashScope) with per-token pricing
   across multiple regions. The qwen.ai consumer site fronts the chat product.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/qwen.png
 tags:
   - AI
   - LLM
@@ -19,45 +32,75 @@ created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-  - aid: qwen:dashscope
-    name: DashScope (Alibaba Cloud Model Studio) API
-    description: >-
-      Native Alibaba Cloud Model Studio API serving the Qwen model family. Provides chat
-      completions, multimodal vision, embeddings, audio (TTS/ASR), image generation, video
-      generation, function calling, and tool use. Both DashScope-native and OpenAI-compatible
-      endpoints. Multiple regional base URLs (Singapore, US-Virginia, HK, Frankfurt, Beijing).
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.alibabacloud.com/help/en/model-studio
-    baseURL: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
-    tags:
-      - AI
-      - LLM
-      - Chat Completions
-      - Vision
-      - Embeddings
-      - Audio
-      - Image Generation
-      - Video Generation
-      - OpenAI Compatible
-    properties:
-      - type: Documentation
-        url: https://www.alibabacloud.com/help/en/model-studio
-      - type: Signup
-        url: https://www.alibabacloud.com/product/modelstudio
-      - type: Pricing
-        url: https://www.alibabacloud.com/help/en/model-studio/models
-      - type: GitHub
-        url: https://github.com/QwenLM
-      - type: ConsumerWebsite
-        url: https://qwen.ai/
-      - type: SingaporeBaseURL
-        url: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
-      - type: USBaseURL
-        url: https://dashscope-us.aliyuncs.com/compatible-mode/v1
-      - type: HongKongBaseURL
-        url: https://cn-hongkong.dashscope.aliyuncs.com/compatible-mode/v1
-      - type: BeijingBaseURL
-        url: https://dashscope.aliyuncs.com/compatible-mode/v1
+- aid: qwen:dashscope
+  name: DashScope (Alibaba Cloud Model Studio) API
+  description: >-
+    Native Alibaba Cloud Model Studio API serving the Qwen model family. Provides chat completions, multimodal
+    vision, embeddings, audio (TTS/ASR), image generation, video generation, function calling, and tool
+    use. Both DashScope-native and OpenAI-compatible endpoints. Multiple regional base URLs (Singapore,
+    US-Virginia, HK, Frankfurt, Beijing).
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.alibabacloud.com/help/en/model-studio
+  baseURL: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+  tags:
+  - AI
+  - LLM
+  - Chat Completions
+  - Vision
+  - Embeddings
+  - Audio
+  - Image Generation
+  - Video Generation
+  - OpenAI Compatible
+  properties:
+  - type: Documentation
+    url: https://www.alibabacloud.com/help/en/model-studio
+  - type: Signup
+    url: https://www.alibabacloud.com/product/modelstudio
+  - type: Pricing
+    url: https://www.alibabacloud.com/help/en/model-studio/models
+  - type: GitHub
+    url: https://github.com/QwenLM
+  - type: ConsumerWebsite
+    url: https://qwen.ai/
+  - type: SingaporeBaseURL
+    url: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+  - type: USBaseURL
+    url: https://dashscope-us.aliyuncs.com/compatible-mode/v1
+  - type: HongKongBaseURL
+    url: https://cn-hongkong.dashscope.aliyuncs.com/compatible-mode/v1
+  - type: BeijingBaseURL
+    url: https://dashscope.aliyuncs.com/compatible-mode/v1
+- aid: qwen:qwen-chat-api
+  name: Qwen Chat API
+  description: The Chat API from Qwen — 1 operation(s) for chat.
+  humanURL: https://www.alibabacloud.com/help/en/model-studio
+  baseURL: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+  tags:
+  - Chat
+  properties:
+  - type: OpenAPI
+    url: openapi/qwen-chat-api-openapi.yml
+- aid: qwen:qwen-embeddings-api
+  name: Qwen Embeddings API
+  description: The Embeddings API from Qwen — 1 operation(s) for embeddings.
+  humanURL: https://www.alibabacloud.com/help/en/model-studio
+  baseURL: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+  tags:
+  - Embeddings
+  properties:
+  - type: OpenAPI
+    url: openapi/qwen-embeddings-api-openapi.yml
+- aid: qwen:qwen-models-api
+  name: Qwen Models API
+  description: The Models API from Qwen — 1 operation(s) for models.
+  humanURL: https://www.alibabacloud.com/help/en/model-studio
+  baseURL: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+  tags:
+  - Models
+  properties:
+  - type: OpenAPI
+    url: openapi/qwen-models-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/qwen-agentic-access.yml
