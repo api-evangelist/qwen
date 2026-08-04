@@ -1,0 +1,18 @@
+{
+  "provider": "qwen",
+  "sources": [
+    "qwen-chat-api-openapi.yml",
+    "qwen-embeddings-api-openapi.yml",
+    "qwen-models-api-openapi.yml"
+  ],
+  "outputs": [
+    "qwen-chat-api-openapi.yml",
+    "qwen-embeddings-api-openapi.yml",
+    "qwen-models-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
