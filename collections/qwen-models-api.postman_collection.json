@@ -1,0 +1,106 @@
+{
+  "item": [
+    {
+      "id": "c10686ed-83f1-4fe7-925c-ea5f207d8151",
+      "name": "Models",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eb3b56e9-2203-4ed7-b160-3df630f30908",
+          "name": "List available models",
+          "request": {
+            "name": "List available models",
+            "description": {},
+            "url": {
+              "path": [
+                "models"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f4af2a6a-c41b-493e-89a9-93e121146f6d",
+              "name": "Model list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "models"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e962cb08-5b54-4c52-9e28-6db5258c3568",
+    "name": "Qwen via Alibaba Cloud Model Studio (DashScope) Chat Models API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "OpenAI-compatible REST API for invoking Alibaba's Qwen large language model family through Alibaba Cloud Model Studio (DashScope). Supports chat completions, text embeddings, and related model interfaces. Regional API keys are not interchangeable across the Singapore, US Virginia, and Beijing endpoints.",
+      "type": "text/plain"
+    }
+  }
+}

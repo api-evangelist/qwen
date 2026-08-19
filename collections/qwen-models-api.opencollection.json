@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Qwen via Alibaba Cloud Model Studio (DashScope) Chat Models API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Models",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List available models",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/models"
+          },
+          "docs": "List available models"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
