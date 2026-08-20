@@ -22,6 +22,13 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/qwen.png
 tags:
+  - Artificial Intelligence
+  - LLM
+  - Inference
+  - Open-Source
+  - Alibaba
+  - Multi-Modal
+tags_raw:
   - AI
   - LLM
   - Inference
@@ -43,6 +50,16 @@ apis:
   humanURL: https://www.alibabacloud.com/help/en/model-studio
   baseURL: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
   tags:
+  - Artificial Intelligence
+  - LLM
+  - Chat Completions
+  - Vision
+  - Embeddings
+  - Audio
+  - Image-Generation
+  - Video Generation
+  - OpenAI-Compatible
+  tags_raw:
   - AI
   - LLM
   - Chat Completions
