@@ -7,6 +7,18 @@ description: >-
   Qwen3.5-Flash, Qwen3-VL (vision), Qwen-Coder, Qwen-Audio, and Qwen open-source weights.
   APIs are exposed via Alibaba Cloud Model Studio (DashScope) with per-token pricing
   across multiple regions. The qwen.ai consumer site fronts the chat product.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
