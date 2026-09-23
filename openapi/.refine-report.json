@@ -1,9 +1,7 @@
 {
   "provider": "qwen",
   "sources": [
-    "qwen-chat-api-openapi.yml",
-    "qwen-embeddings-api-openapi.yml",
-    "qwen-models-api-openapi.yml"
+    "_original/qwen-openapi.yml"
   ],
   "outputs": [
     "qwen-chat-api-openapi.yml",
@@ -13,6 +11,20 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "qwen-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "qwen-openapi.yml: tagged paths POST /chat/completions -> Chat",
+    "qwen-openapi.yml: tagged paths POST /embeddings -> Embeddings",
+    "qwen-openapi.yml: tagged paths GET /models -> Models",
+    "qwen-openapi.yml: declared missing tag: Chat",
+    "qwen-openapi.yml: declared missing tag: Embeddings",
+    "qwen-openapi.yml: declared missing tag: Models",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "qwen-chat-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "qwen-embeddings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "qwen-models-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

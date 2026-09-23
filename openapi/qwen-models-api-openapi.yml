@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Qwen via Alibaba Cloud Model Studio (DashScope) Chat Models API
+  title: Qwen via Alibaba Cloud Model Studio (DashScope) Models API
   description: OpenAI-compatible REST API for invoking Alibaba's Qwen large language model family through Alibaba Cloud Model Studio (DashScope). Supports chat completions, text embeddings, and related model interfaces. Regional API keys are not interchangeable across the Singapore, US Virginia, and Beijing endpoints.
   version: v1
 servers:
