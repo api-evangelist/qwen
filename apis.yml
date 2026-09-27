@@ -38,7 +38,7 @@ tags:
   - Artificial Intelligence
   - LLM
   - Inference
-  - Open-Source
+  - Open Source
   - Alibaba
   - Multi-Modal
 tags_raw:
@@ -48,6 +48,7 @@ tags_raw:
   - Open Source
   - Alibaba
   - Multimodal
+  - Open-Source
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.23'
@@ -69,7 +70,7 @@ apis:
   - Vision
   - Embeddings
   - Audio
-  - Image-Generation
+  - Image Generation
   - Video Generation
   - OpenAI-Compatible
   tags_raw:
@@ -82,6 +83,7 @@ apis:
   - Image Generation
   - Video Generation
   - OpenAI Compatible
+  - Image-Generation
   properties:
   - type: Documentation
     url: https://www.alibabacloud.com/help/en/model-studio
