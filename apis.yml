@@ -105,16 +105,6 @@ apis:
     url: https://cn-hongkong.dashscope.aliyuncs.com/compatible-mode/v1
   - type: BeijingBaseURL
     url: https://dashscope.aliyuncs.com/compatible-mode/v1
-- aid: qwen:qwen-chat-api
-  name: Qwen Chat API
-  description: The Chat API from Qwen — 1 operation(s) for chat.
-  humanURL: https://www.alibabacloud.com/help/en/model-studio
-  baseURL: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
-  tags:
-  - Chat
-  properties:
-  - type: OpenAPI
-    url: openapi/qwen-chat-api-openapi.yml
 - aid: qwen:qwen-embeddings-api
   name: Qwen Embeddings API
   description: The Embeddings API from Qwen — 1 operation(s) for embeddings.
@@ -135,6 +125,16 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/qwen-models-api-openapi.yml
+- aid: qwen:qwen-chat-completions-api
+  name: Qwen Chat Completions API
+  description: The Chat Completions API from Qwen — 1 operation(s) for chat completions.
+  humanURL: https://www.alibabacloud.com/help/en/model-studio
+  baseURL: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+  tags:
+  - Chat Completions
+  properties:
+  - type: OpenAPI
+    url: openapi/qwen-chat-completions-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/qwen-agentic-access.yml
