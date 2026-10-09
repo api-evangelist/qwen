@@ -177,3 +177,36 @@ plans:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - metered
+  units:
+  - token
+  plans:
+  - name: DashScope Pay As You Go (International)
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - token
+    periods:
+    - per-use
+  - name: DashScope Pay As You Go (China Mainland)
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - token
+    periods:
+    - per-use
+  - name: Self-Hosted (Open Weights)
+    access: free
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods:
+    - per-use
