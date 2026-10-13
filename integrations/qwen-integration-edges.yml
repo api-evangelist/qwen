@@ -1,0 +1,66 @@
+edges:
+- partner_name: OpenRouter
+  partner: openrouter
+  partner_match: router
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: system-coverage
+  evidence: https://openrouter.ai/api/v1/models
+  coverage_role:
+  - model-maker
+  router_signals:
+    model-maker:
+      models: 42
+      router_ids:
+      - qwen
+      tools_share: 0.95
+      structured_output_share: 0.98
+  matched_by: verified-token-table
+  detected_by: sweep-model-routing.py
+  first_seen: '2026-10-13'
+- partner_name: LiteLLM
+  partner: litellm
+  partner_match: router
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: system-coverage
+  evidence: https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
+  coverage_role:
+  - provider
+  router_signals:
+    provider:
+      models: 92
+      router_ids:
+      - qwen_ai_platform
+      - qwencloud
+      tools_share: 1.0
+      structured_output_share: 0.24
+  matched_by: verified-token-table
+  detected_by: sweep-model-routing.py
+  first_seen: '2026-10-13'
+- partner_name: OpenAI
+  partner: openai
+  partner_match: domain
+  type: contract
+  channel: provider-built
+  relationship: compatible
+  direction: provider-built
+  evidence: https://github.com/api-evangelist/qwen/blob/main/openapi/qwen-chat-completions-api-openapi.yml#L4
+  contract_reference:
+    repo: qwen
+    spec_file: qwen-chat-completions-api-openapi.yml
+    property: description
+    value: OpenAI-compatible
+    note: 'qwen declares OpenAI compatibility: ''description: OpenAI-compatible REST API for invoking Alibaba''s
+      Qwen large language model family through Alibaba Cloud Model Studio (DashScope). Supports chat co'''
+    detected_by: sweep-model-routing.py
+    detected: '2026-10-13'
+  detected_by: sweep-model-routing.py
+  first_seen: '2026-10-13'
+generated: '2026-10-13'
+method: searched
+checked:
+- https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
+- https://openrouter.ai/api/v1/models
