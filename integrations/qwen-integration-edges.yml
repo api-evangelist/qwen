@@ -59,8 +59,32 @@ edges:
     detected: '2026-10-13'
   detected_by: sweep-model-routing.py
   first_seen: '2026-10-13'
+- partner_name: Hugging Face Hub
+  partner: hugging-face
+  partner_match: framework
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: system-coverage
+  evidence: https://huggingface.co/Qwen
+  coverage_role:
+  - stt
+  - tts
+  framework_signals:
+    packages:
+    - huggingface.co/Qwen
+    roles:
+    - stt
+    - tts
+    vendor_domain: qwen.ai
+    hub_org_models_in_top_1000: 9
+    hub_org_downloads: 6969917
+  matched_by: verified-domain-table
+  detected_by: sweep-voice-ai.py
+  first_seen: '2026-10-15'
 generated: '2026-10-13'
 method: searched
 checked:
 - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json
+- https://huggingface.co/models?pipeline_tag=text-to-speech
 - https://openrouter.ai/api/v1/models

@@ -45,3 +45,14 @@
     detected: '2026-10-13'
   status: not-a-workflow
   arazzo: null
+- slug: qwen-hugging-face-hub
+  label: Hugging Face Hub
+  partner: hugging-face
+  partner_name: Hugging Face Hub
+  type: coverage
+  channel: partner-built
+  evidence: https://huggingface.co/Qwen
+  source: edge
+  relationship: system-coverage
+  status: not-a-workflow
+  arazzo: null
