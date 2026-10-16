@@ -42,7 +42,7 @@
     note: 'qwen declares OpenAI compatibility: ''description: OpenAI-compatible REST API for invoking Alibaba''s
       Qwen large language model family through Alibaba Cloud Model Studio (DashScope). Supports chat co'''
     detected_by: sweep-model-routing.py
-    detected: '2026-10-13'
+    detected: '2026-10-15'
   status: not-a-workflow
   arazzo: null
 - slug: qwen-hugging-face-hub
