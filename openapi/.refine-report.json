@@ -8,7 +8,9 @@
     "qwen-embeddings-api-openapi.yml",
     "qwen-models-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -20,10 +22,11 @@
     "qwen-openapi.yml: declared missing tag: Chat",
     "qwen-openapi.yml: declared missing tag: Embeddings",
     "qwen-openapi.yml: declared missing tag: Models",
-    "apis.yml register: already-registered"
+    "superseded outputs removed: qwen-chat-completions-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 4 total)"
   ],
   "skipped": [
-    "qwen-chat-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "qwen-chat-completions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "qwen-embeddings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "qwen-models-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
