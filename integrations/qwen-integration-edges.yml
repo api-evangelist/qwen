@@ -11,7 +11,7 @@ edges:
   - model-maker
   router_signals:
     model-maker:
-      models: 42
+      models: 43
       router_ids:
       - qwen
       tools_share: 0.95
@@ -56,7 +56,7 @@ edges:
     note: 'qwen declares OpenAI compatibility: ''description: OpenAI-compatible REST API for invoking Alibaba''s
       Qwen large language model family through Alibaba Cloud Model Studio (DashScope). Supports chat co'''
     detected_by: sweep-model-routing.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   detected_by: sweep-model-routing.py
   first_seen: '2026-10-13'
 - partner_name: Hugging Face Hub
@@ -78,7 +78,7 @@ edges:
     - tts
     vendor_domain: qwen.ai
     hub_org_models_in_top_1000: 9
-    hub_org_downloads: 6969917
+    hub_org_downloads: 7124440
   matched_by: verified-domain-table
   detected_by: sweep-voice-ai.py
   first_seen: '2026-10-15'
