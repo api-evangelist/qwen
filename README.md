@@ -1,4 +1,4 @@
-# Qwen (qwen)
+# Qwen
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,68 +66,120 @@
 
 Qwen is Alibaba's large language model family, including Qwen3-Max, Qwen3.5-Plus, Qwen3.5-Flash, Qwen3-VL (vision), Qwen-Coder, Qwen-Audio, and Qwen open-source weights. APIs are exposed via Alibaba Cloud Model Studio (DashScope) with per-token pricing across multiple regions. The qwen.ai consumer site fronts the chat product.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/qwen/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/qwen/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · LLM · Inference · Open Source · Alibaba · Multi-Modal · Foundation Models
 
-## Tags
+## Qwen on APIs.io
 
-- AI
-- LLM
-- Inference
-- Open Source
-- Alibaba
-- Multimodal
+Everything profiled for Qwen is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/qwen/](https://apis.io/providers/qwen/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (4)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [DashScope (Alibaba Cloud Model Studio) API](https://apis.io/apis/qwen/dashscope/) — Native Alibaba Cloud Model Studio API serving the Qwen model family. Provides chat completions, multimodal vision, embeddings, audio (TTS/ASR), image…
+- [Qwen Embeddings API](https://apis.io/apis/qwen/qwen-embeddings-api/) — The Embeddings API from Qwen — 1 operation(s) for embeddings.
+- [Qwen Models API](https://apis.io/apis/qwen/qwen-models-api/) — The Models API from Qwen — 1 operation(s) for models.
+- [Qwen Chat Completions API](https://apis.io/apis/qwen/qwen-chat-completions-api/) — The Chat Completions API from Qwen — 1 operation(s) for chat completions.
 
-## APIs
+### Published properties
 
-### DashScope (Alibaba Cloud Model Studio) API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Native Alibaba Cloud Model Studio API serving the Qwen model family. Provides chat completions, multimodal vision, embeddings, audio (TTS/ASR), image generation, video generation, function calling, and tool use. Both DashScope-native and OpenAI-compatible endpoints. Multiple regional base URLs (Singapore, US-Virginia, HK, Frankfurt, Beijing).
+#### Agentic access (1)
 
-- **Human URL:** [https://www.alibabacloud.com/help/en/model-studio](https://www.alibabacloud.com/help/en/model-studio)
-- **Base URL:** `https://dashscope-intl.aliyuncs.com/compatible-mode/v1`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Qwen Agentic Access](https://apis.io/agentic-access/qwen/qwen-agentic-access/)
 
-- AI
-- LLM
-- Chat Completions
-- Vision
-- Embeddings
-- Audio
-- Image Generation
-- Video Generation
-- OpenAI Compatible
+#### Collections (4)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://www.alibabacloud.com/help/en/model-studio)
-- [Sign Up](https://www.alibabacloud.com/product/modelstudio)
-- [Pricing](https://www.alibabacloud.com/help/en/model-studio/models)
-- [Git Hub](https://github.com/QwenLM)
-- [Consumer Website](https://qwen.ai/)
-- [Singapore Base U R L](https://dashscope-intl.aliyuncs.com/compatible-mode/v1)
-- [U S Base U R L](https://dashscope-us.aliyuncs.com/compatible-mode/v1)
-- [Hong Kong Base U R L](https://cn-hongkong.dashscope.aliyuncs.com/compatible-mode/v1)
-- [Beijing Base U R L](https://dashscope.aliyuncs.com/compatible-mode/v1)
-- [Postman Collection](collections/qwen.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/qwen.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Qwen via Alibaba Cloud Model Studio (DashScope)](https://apis.io/collections/qwen/open-qwen/)
+- [Qwen via Alibaba Cloud Model Studio (DashScope) Chat API](https://apis.io/collections/qwen/open-qwen-chat-api/)
+- [Qwen via Alibaba Cloud Model Studio (DashScope) Chat Embeddings API](https://apis.io/collections/qwen/open-qwen-embeddings-api/)
+- [Qwen via Alibaba Cloud Model Studio (DashScope) Chat Models API](https://apis.io/collections/qwen/open-qwen-models-api/)
 
-## Common Properties
+#### Security (2)
 
-- [LinkedIn](https://www.linkedin.com/company/qwen)
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Qwen Authentication](https://apis.io/security/qwen/qwen-authentication/)
+- [Qwen Domain Security](https://apis.io/security/qwen/qwen-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Qwen Plans Pricing](https://apis.io/plans/qwen/qwen-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Qwen Rate Limits](https://apis.io/rate-limits/qwen/qwen-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Qwen Finops](https://apis.io/finops/qwen/qwen-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://qwen.ai/)
 - [Documentation](https://www.alibabacloud.com/help/en/model-studio)
-- [Git Hub](https://github.com/QwenLM)
-- [Plans](plans/qwen-plans-pricing.yml)
-- [Rate Limits](rate-limits/qwen-rate-limits.yml)
-- [Fin Ops](finops/qwen-finops.yml)
+- [Blog](https://qwenlm.github.io/blog/index.xml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 28.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 44.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 31.6 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/qwen/](https://apis.io/providers/qwen/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Qwen: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/qwen/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
